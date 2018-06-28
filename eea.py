@@ -1,0 +1,20 @@
+a=input()
+b=input()
+r=[]
+s=[]
+t=[]
+s.append(0)
+s.append(1)
+t.append(1)
+t.append(0)
+r.append(a)
+r.append(b)
+i=1
+while(r[i]!=0):
+	i+=1
+	q = r[i-2]//r[i-1]
+	r.append(r[i-2]-q*r[i-1])
+	s.append(s[i-2]-q*s[i-1])
+	t.append(t[i-2]-q*t[i-1])
+print(s[i-1],t[i-1])
+print(r[i-1])
